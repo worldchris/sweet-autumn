@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SooChrys - Sweet Autumn | Musique Zen & Guitare Acoustique</title>
-    <meta name="description" content="Écoutez Sweet Autumn de SooChrys. Une composition originale de guitare acoustique pour la relaxation et la méditation.">
+    <meta name="description" content="Découvrez Sweet Autumn de SooChrys. Une composition originale de guitare acoustique pour vos moments de détente et de méditation.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+    
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -19,54 +21,78 @@
             text-align: center;
         }
         .container {
-            max-width: 600px;
+            max-width: 650px;
+            width: 90%;
             padding: 40px 20px;
             background: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+            margin: 20px;
         }
         h1 { font-family: 'Lora', serif; font-size: 2.5em; color: #8e735b; margin-bottom: 10px; }
-        p { line-height: 1.6; color: #666; }
-        .audio-player { margin: 30px 0; }
-        audio { width: 100%; border-radius: 50px; }
-        .links { display: flex; flex-direction: column; gap: 15px; margin-top: 30px; }
+        p { line-height: 1.6; color: #666; margin-bottom: 20px; }
+        
+        /* Conteneur vidéo responsive */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* Ratio 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 15px;
+            background: #000;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .links { display: flex; flex-direction: column; gap: 15px; }
         .btn {
-            padding: 15px;
+            padding: 16px;
             text-decoration: none;
-            border-radius: 8px;
-            transition: 0.3s;
+            border-radius: 10px;
+            transition: all 0.3s ease;
             font-weight: 500;
             border: 1px solid #8e735b;
         }
-        .btn-primary { background-color: #8e735b; color: white; }
-        .btn-primary:hover { background-color: #725c48; }
+        .btn-primary { background-color: #8e735b; color: white; border: none; }
+        .btn-primary:hover { background-color: #725c48; transform: translateY(-2px); }
         .btn-secondary { color: #8e735b; }
-        .btn-secondary:hover { background-color: #fdfaf6; }
-        footer { margin-top: 40px; font-size: 0.8em; color: #aaa; }
+        .btn-secondary:hover { background-color: #fdfaf6; color: #725c48; border-color: #725c48; }
+        
+        footer { margin-top: 40px; font-size: 0.85em; color: #aaa; border-top: 1px solid #eee; padding-top: 20px; }
+        footer a { color: #8e735b; text-decoration: none; }
     </style>
 </head>
 <body>
 
     <div class="container">
         <h1>Sweet Autumn</h1>
-        <p>Une parenthèse acoustique par <strong>SooChrys</strong></p>
+        <p>Une composition instrumentale pour guitare acoustique par <strong>SooChrys</strong></p>
         
-        <div class="audio-player">
-            <audio controls>
-                <source src="sweet-autumn.mp3" type="audio/mpeg">
-                Votre navigateur ne supporte pas le lecteur audio.
-            </audio>
-            <p style="font-size: 0.9em; font-style: italic;">Écoutez un extrait directement ici</p>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/kO3ZxNJTSnY" 
+                title="Sweet Autumn - SooChrys" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
         </div>
 
         <div class="links">
-            <a href="https://links.cfchits.com/@sweet-autumn" class="btn btn-primary">🎧 Écouter sur toutes les plateformes</a>
-            <a href="https://worldchris.github.io/tuto-guitare-Stand-By-Me/" class="btn btn-secondary">🎸 Apprendre la guitare (Tutos)</a>
-            <a href="https://flip.it/mmIKlf" class="btn btn-secondary">📖 Magazine Musique Zen</a>
+            <a href="https://links.cfchits.com/@sweet-autumn" class="btn btn-primary" target="_blank">🎧 Écouter sur Spotify, Apple, Deezer...</a>
+            <a href="https://worldchris.github.io/tuto-guitare-Stand-By-Me/" class="btn btn-secondary" target="_blank">🎸 Apprendre la guitare (Tutos)</a>
+            <a href="https://flip.it/mmIKlf" class="btn btn-secondary" target="_blank">📖 Magazine Musique Zen</a>
         </div>
 
         <footer>
-            &copy; 2026 SooChrys - <a href="https://cfchits.com" style="color: #aaa;">cfchits.com</a>
+            &copy; 2026 SooChrys | <a href="https://cfchits.com" target="_blank">cfchits.com</a>
         </footer>
     </div>
 
